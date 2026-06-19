@@ -105,13 +105,16 @@ h1 em, h2 em { font-style: normal; color: var(--acid); }
 .section-heading h2 em { color: #737967; }
 .section-heading > p { margin: 0 0 8px; color: #64645c; font-size: 14px; line-height: 1.65; }
 
-.service-tabs { margin-top: 80px; display: flex; border-bottom: 1px solid var(--line); }
-.service-tab { position: relative; flex: 1; padding: 20px 10px; border: 0; background: transparent; color: #6a6961; font-size: 14px; font-weight: 500; cursor: pointer; }
-.service-tab::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; background: var(--ink); transform: scaleX(0); transition: transform .4s var(--ease); }
-.service-tab.active { color: var(--ink); }
-.service-tab.active::after { transform: scaleX(1); }
-.service-panel { position: relative; min-height: 365px; padding: 48px 5vw 42px; display: grid; grid-template-columns: 70px minmax(260px,.7fr) 1fr; gap: 3vw; color: var(--paper-light); background: var(--ink); overflow: hidden; }
-.service-panel.service-updated .service-copy, .service-panel.service-updated .service-list { animation: service-update .45s var(--ease); }
+.service-tabs { margin-top: 80px; padding-top: 12px; display: flex; align-items: flex-end; gap: 7px; overflow: visible; }
+.service-tab { position: relative; flex: 1; min-height: 78px; padding: 30px 17px 17px; border: 1px solid rgba(23,23,18,.12); border-bottom: 0; border-radius: 13px 13px 0 0; color: #55554e; background: #dfdcd4; font-size: 14px; font-weight: 500; text-align: left; cursor: pointer; box-shadow: 0 -3px 13px rgba(23,23,18,.035); overflow: hidden; transition: min-height .35s var(--ease), color .3s, background .3s, transform .35s var(--ease); }
+.service-tab::before { content: attr(data-index); position: absolute; top: 12px; left: 17px; color: #89887f; font-size: 9px; font-weight: 600; letter-spacing: .12em; transition: color .3s; }
+.service-tab::after { content: ""; position: absolute; top: 13px; right: 14px; width: 7px; height: 7px; border: 1px solid #77766e; border-radius: 50%; transition: border-color .3s, background .3s, transform .35s var(--ease); }
+.service-tab:hover { color: var(--ink); background: #e9e6df; transform: translateY(-4px); }
+.service-tab.active { min-height: 92px; color: var(--paper-light); background: var(--ink); border-color: var(--ink); transform: translateY(0); }
+.service-tab.active::before { color: var(--acid); }
+.service-tab.active::after { border-color: var(--acid); background: var(--acid); transform: scale(1.25); }
+.service-panel { position: relative; min-height: 690px; padding: 52px 5vw 46px; display: grid; grid-template-columns: 62px minmax(280px,.72fr) minmax(360px,1.28fr); grid-template-rows: auto 1fr; gap: 48px 3vw; color: var(--paper-light); background: var(--ink); overflow: hidden; }
+.service-panel.service-updated .service-copy, .service-panel.service-updated .service-gallery, .service-panel.service-updated .service-list { animation: service-update .45s var(--ease); }
 @keyframes service-update { from { opacity: .25; transform: translateY(10px); } }
 .service-panel.switching .service-copy, .service-panel.switching .service-list { opacity: 0; transform: translateY(15px); }
 .service-number { color: var(--acid); font: 20px var(--serif); }
@@ -119,9 +122,23 @@ h1 em, h2 em { font-style: normal; color: var(--acid); }
 .service-copy .eyebrow { color: #8e8d84; }
 .service-copy h3 { margin: 0 0 22px; max-width: 400px; font: 43px/1.08 var(--serif); }
 .service-copy > p:not(.eyebrow) { margin: 0 0 34px; max-width: 370px; color: #aaa99f; font-size: 14px; line-height: 1.65; }
-.service-list { margin: 0; padding: 0; list-style: none; align-self: center; }
-.service-list li { padding: 14px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.13); color: #d9d7ce; font-size: 13px; }
-.service-list li::after { content: "+"; color: var(--acid); }
+.service-gallery { position: relative; z-index: 1; min-width: 0; display: flex; gap: 13px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-color: var(--acid) rgba(255,255,255,.1); scrollbar-width: thin; }
+.service-gallery::-webkit-scrollbar { height: 4px; }
+.service-gallery::-webkit-scrollbar-track { background: rgba(255,255,255,.1); }
+.service-gallery::-webkit-scrollbar-thumb { background: var(--acid); }
+.service-gallery figure { position: relative; flex: 0 0 72%; height: 290px; margin: 0; border-radius: 2px 2px 44px 2px; overflow: hidden; scroll-snap-align: start; background: #333; }
+.service-gallery figure:nth-child(2) { flex-basis: 56%; }
+.service-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.service-gallery figure:hover img { transform: scale(1.035); }
+.service-gallery figcaption { position: absolute; left: 13px; bottom: 12px; padding: 7px 9px; color: var(--ink); background: rgba(248,246,241,.82); backdrop-filter: blur(8px); font-size: 8px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.service-list { grid-column: 2 / -1; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 42px; align-self: end; list-style: none; }
+.service-list li { border-bottom: 1px solid rgba(255,255,255,.13); color: #d9d7ce; font-size: 13px; }
+.service-list button { width: 100%; padding: 15px 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; border: 0; color: inherit; background: transparent; text-align: left; cursor: pointer; }
+.service-list button span { line-height: 1.35; }
+.service-list button i { width: 22px; height: 22px; flex: 0 0 22px; display: grid; place-items: center; border: 1px solid rgba(216,255,85,.45); border-radius: 50%; color: var(--acid); font-style: normal; transition: color .3s, background .3s, transform .4s var(--ease); }
+.service-list li.open button i { color: var(--ink); background: var(--acid); transform: rotate(45deg); }
+.service-list li p { max-height: 0; margin: 0; padding: 0 36px 0 0; overflow: hidden; color: #929289; font-size: 11px; line-height: 1.65; opacity: 0; transition: max-height .45s var(--ease), padding .45s var(--ease), opacity .3s; }
+.service-list li.open p { max-height: 100px; padding-bottom: 16px; opacity: 1; }
 .service-monogram { position: absolute; right: -20px; bottom: -65px; color: rgba(255,255,255,.025); font: 220px/1 var(--serif); pointer-events: none; }
 
 .method-section { background: var(--paper-light); }
@@ -267,11 +284,15 @@ h1 em, h2 em { font-style: normal; color: var(--acid); }
   .section { padding: 90px 20px; grid-template-columns: 1fr; gap: 40px; }
   .sticky-title { position: static; }
   .section-heading h2 { font-size: clamp(50px, 15vw, 72px); }
-  .service-tabs { margin-top: 55px; overflow-x: auto; justify-content: flex-start; }
-  .service-tab { min-width: 120px; }
+  .service-tabs { margin-top: 55px; padding-top: 12px; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+  .service-tabs::-webkit-scrollbar { display: none; }
+  .service-tab { flex: 0 0 158px; min-width: 158px; }
   .service-panel { min-height: auto; padding: 35px 24px; grid-template-columns: 45px 1fr; gap: 25px 12px; }
   .service-copy { grid-column: 2; }
-  .service-list { grid-column: 1 / -1; }
+  .service-gallery { grid-column: 1 / -1; min-width: 0; }
+  .service-gallery figure { flex-basis: 84%; height: 270px; }
+  .service-gallery figure:nth-child(2) { flex-basis: 72%; }
+  .service-list { grid-column: 1 / -1; grid-template-columns: 1fr; }
   .service-monogram { font-size: 160px; }
   .method-grid { margin-top: 55px; grid-template-columns: 1fr; }
   .method-card { min-height: 270px; }

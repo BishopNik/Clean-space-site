@@ -77,6 +77,64 @@ const services = {
   }
 };
 
+const serviceAnswers = {
+  en: {
+    home: ['Flexible weekly, biweekly or one-time cleaning tailored to your rooms and priorities.', 'A thorough top-to-bottom reset, including hard-to-reach areas and inside selected cabinets.', 'Degreasing, limescale removal and detailed care of fittings, appliances and sanitary surfaces.', 'Streak-free glass, carefully cleaned frames, tracks, sills and accessible balcony surfaces.', 'Removal of fine dust and construction residue before the apartment is ready to use.'],
+    office: ['A consistent team and checklist keep workstations and shared spaces ready every day.', 'Quiet service before or after business hours, including selected weekends.', 'Desks, meeting rooms, kitchens and high-touch points cleaned without disrupting your setup.', 'Streak-free glass partitions, entrance glazing, frames and accessible windows.', 'We can monitor and replenish soap, paper and other agreed hygiene supplies.'],
+    car: ['Controlled extraction removes embedded dirt while keeping seats and carpeting from becoming soaked.', 'Leather is gently cleaned, balanced and conditioned to preserve its natural matte finish.', 'Careful low-moisture cleaning for headliners, dashboards, consoles and door panels.', 'Source-focused treatment neutralises odours instead of covering them with fragrance.', 'Special tools lift pet hair from fibres, seams, boot lining and hard-to-reach corners.'],
+    special: ['Fabric testing comes first, followed by stain treatment and controlled deep extraction.', 'Low-moisture cleaning refreshes the sleeping surface and helps remove dust and odours.', 'The method is selected for the fibre type, pile and construction of each textile.', 'Stains are assessed individually so we can set an honest expectation before treatment.', 'Optional protective treatment helps fibres resist new spills and everyday soiling.'],
+    post: ['Industrial vacuuming and HEPA filtration capture fine dust from every horizontal surface.', 'Suitable products remove local residue without scratching or clouding the material below.', 'Detailed cleaning includes glass edges, frame joints, handles and window tracks.', 'Dust is removed inside newly installed storage, drawers and around fixtures.', 'A final air and surface check leaves the space genuinely ready to move into.']
+  },
+  de: {
+    home: ['Flexible wöchentliche, zweiwöchentliche oder einmalige Reinigung nach Ihren Prioritäten.', 'Gründliche Reinigung von oben bis unten, inklusive schwer erreichbarer Bereiche.', 'Entfettung, Kalkentfernung und Detailpflege von Armaturen, Geräten und Sanitärflächen.', 'Streifenfreies Glas sowie sorgfältig gereinigte Rahmen, Schienen und Fensterbänke.', 'Feinstaub und Baurückstände werden entfernt, bevor die Wohnung bezugsfertig ist.'],
+    office: ['Ein festes Team und eine klare Checkliste sorgen täglich für verlässliche Sauberkeit.', 'Leiser Service vor oder nach der Arbeitszeit sowie an ausgewählten Wochenenden.', 'Arbeitsplätze, Besprechungsräume, Küchen und Kontaktflächen werden diskret gereinigt.', 'Streifenfreie Glaswände, Eingangsverglasung, Rahmen und erreichbare Fenster.', 'Wir kontrollieren und ergänzen vereinbarte Seifen-, Papier- und Hygienevorräte.'],
+    car: ['Kontrollierte Extraktion entfernt tiefen Schmutz, ohne Sitze und Teppiche zu durchnässen.', 'Leder wird sanft gereinigt und gepflegt, damit das natürliche matte Finish erhalten bleibt.', 'Schonende Reinigung von Dachhimmel, Armaturenbrett, Konsole und Türverkleidungen.', 'Gerüche werden an der Quelle neutralisiert statt lediglich mit Duft überdeckt.', 'Spezialwerkzeuge lösen Tierhaare aus Fasern, Nähten und schwer erreichbaren Ecken.'],
+    special: ['Nach einem Fasertest folgen Fleckenbehandlung und kontrollierte Tiefenextraktion.', 'Feuchtigkeitsarme Reinigung erfrischt die Liegefläche und reduziert Staub und Gerüche.', 'Die Methode wird exakt an Faserart, Flor und Konstruktion des Textils angepasst.', 'Jeder Fleck wird einzeln beurteilt, damit das erreichbare Ergebnis transparent bleibt.', 'Optionaler Schutz hilft Fasern gegen neue Flecken und alltägliche Verschmutzung.'],
+    post: ['Industrielles Saugen und HEPA-Filtration entfernen feinen Staub von allen Flächen.', 'Geeignete Mittel entfernen lokale Rückstände, ohne das Material zu beschädigen.', 'Glaskanten, Rahmenverbindungen, Griffe und Fensterschienen werden detailliert gereinigt.', 'Staub wird aus neuen Schränken, Schubladen und rund um Armaturen entfernt.', 'Die abschließende Luft- und Oberflächenkontrolle macht den Raum bezugsfertig.']
+  },
+  pl: {
+    home: ['Elastyczne sprzątanie cotygodniowe, co dwa tygodnie lub jednorazowe według priorytetów.', 'Dokładne sprzątanie od góry do dołu, także w trudno dostępnych miejscach.', 'Odtłuszczanie, usuwanie kamienia i pielęgnacja armatury, AGD oraz sanitariatów.', 'Szyby bez smug oraz dokładnie umyte ramy, prowadnice, parapety i dostępny balkon.', 'Usuwamy drobny pył i pozostałości budowlane, aby mieszkanie było gotowe do użycia.'],
+    office: ['Stały zespół i checklista zapewniają powtarzalny standard każdego dnia.', 'Cicha usługa przed lub po godzinach pracy oraz w wybrane weekendy.', 'Biurka, sale spotkań, kuchnie i powierzchnie dotykowe czyścimy bez zmiany organizacji.', 'Szkło bez smug, drzwi wejściowe, ramy i dostępne okna.', 'Kontrolujemy i uzupełniamy uzgodnione zapasy mydła, papieru i środków higienicznych.'],
+    car: ['Kontrolowana ekstrakcja usuwa głęboki brud bez przemoczenia foteli i wykładziny.', 'Skórę delikatnie czyścimy i pielęgnujemy, zachowując jej naturalne matowe wykończenie.', 'Bezpieczne czyszczenie podsufitki, deski, konsoli oraz boczków drzwi.', 'Neutralizujemy źródło zapachu zamiast maskować je intensywnym aromatem.', 'Specjalne narzędzia usuwają sierść z włókien, szwów, bagażnika i zakamarków.'],
+    special: ['Najpierw testujemy włókna, potem usuwamy plamy i wykonujemy kontrolowaną ekstrakcję.', 'Czyszczenie z małą ilością wilgoci odświeża materac i ogranicza kurz oraz zapachy.', 'Metodę dobieramy do rodzaju włókna, runa i konstrukcji konkretnego tekstylia.', 'Każdą plamę oceniamy osobno i przed pracą uczciwie określamy możliwy efekt.', 'Opcjonalna impregnacja pomaga chronić włókna przed nowymi plamami i brudem.'],
+    post: ['Odkurzacze przemysłowe i filtracja HEPA zbierają drobny pył ze wszystkich powierzchni.', 'Odpowiednie preparaty usuwają resztki bez rysowania i matowienia materiału.', 'Czyścimy krawędzie szyb, łączenia ram, klamki oraz prowadnice okienne.', 'Usuwamy pył z nowych szaf, szuflad, zabudowy i przestrzeni wokół armatury.', 'Końcowa kontrola powietrza i powierzchni pozostawia wnętrze gotowe do użycia.']
+  }
+};
+
+const serviceMedia = {
+  home: [
+    ['images/project-kitchen.png', 'center'],
+    ['images/hero-clean-space.png', '64% center'],
+    ['images/project-sofa.png', 'center']
+  ],
+  office: [
+    ['images/project-office.png', 'center'],
+    ['images/project-office.png', '24% center'],
+    ['images/project-office.png', '76% center']
+  ],
+  car: [
+    ['images/project-car.png', 'center'],
+    ['images/project-car.png', '24% center'],
+    ['images/project-car.png', '76% center']
+  ],
+  special: [
+    ['images/project-sofa.png', 'center'],
+    ['images/project-mattress.png', 'center'],
+    ['images/hero-clean-space.png', '68% center']
+  ],
+  post: [
+    ['images/hero-clean-space.png', 'center'],
+    ['images/project-kitchen.png', 'center'],
+    ['images/project-office.png', 'center']
+  ]
+};
+
+const galleryLabels = {
+  en: ['Overview', 'Detail', 'Result'],
+  de: ['Übersicht', 'Detail', 'Ergebnis'],
+  pl: ['Przegląd', 'Detal', 'Efekt']
+};
+
 let language = localStorage.getItem('clean-space-language') || 'en';
 let activeService = 'home';
 let projectIndex = 0;
@@ -111,7 +169,9 @@ function renderService(key, animate = true) {
   $('#service-eyebrow').textContent = content[0];
   $('#service-title').textContent = content[1];
   $('#service-description').textContent = content[2];
-  $('#service-list').innerHTML = content[3].map((item) => `<li>${item}</li>`).join('');
+  $('#service-gallery').innerHTML = serviceMedia[key].map((media, index) => `<figure><img src="${media[0]}" alt="${content[1]} — ${galleryLabels[language][index]}" style="object-position:${media[1]}" /><figcaption>${String(index + 1).padStart(2, '0')} · ${galleryLabels[language][index]}</figcaption></figure>`).join('');
+  const answers = serviceAnswers[language][key];
+  $('#service-list').innerHTML = content[3].map((item, index) => `<li><button type="button" aria-expanded="false"><span>${item}</span><i aria-hidden="true">+</i></button><p>${answers[index]}</p></li>`).join('');
   $('.service-number').textContent = String(['home', 'office', 'car', 'special', 'post'].indexOf(key) + 1).padStart(2, '0');
   if (animate) {
     panel.classList.remove('service-updated');
@@ -146,6 +206,20 @@ function updateScroll() {
 
 $$('.lang-switch button').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
 $$('.service-tab').forEach((button) => button.addEventListener('click', () => renderService(button.dataset.service)));
+$('#service-list').addEventListener('click', (event) => {
+  const button = event.target.closest('button');
+  if (!button) return;
+  const item = button.closest('li');
+  const willOpen = !item.classList.contains('open');
+  $$('#service-list li').forEach((other) => {
+    other.classList.remove('open');
+    $('button', other).setAttribute('aria-expanded', 'false');
+  });
+  if (willOpen) {
+    item.classList.add('open');
+    button.setAttribute('aria-expanded', 'true');
+  }
+});
 $('#project-prev').addEventListener('click', () => moveProject(projectIndex - 1));
 $('#project-next').addEventListener('click', () => moveProject(projectIndex + 1));
 $('#back-to-top').addEventListener('click', () => {

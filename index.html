@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css?v=5" />
-    <script src="js/script.js?v=5" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=8" />
+    <script src="js/script.js?v=8" defer></script>
   </head>
   <body>
     <div class="page-progress" aria-hidden="true"></div>
@@ -94,11 +94,11 @@
           </div>
 
           <div class="service-tabs reveal" role="tablist">
-            <button type="button" class="service-tab active" role="tab" aria-controls="service-panel" data-service="home" data-i18n="services.home.tab">Apartments</button>
-            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="office" data-i18n="services.office.tab">Office</button>
-            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="car" data-i18n="services.car.tab">Car interior</button>
-            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="special" data-i18n="services.special.tab">Upholstery</button>
-            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="post" data-i18n="services.post.tab">After renovation</button>
+            <button type="button" class="service-tab active" role="tab" aria-controls="service-panel" data-index="01" data-service="home" data-i18n="services.home.tab">Apartments</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-index="02" data-service="office" data-i18n="services.office.tab">Office</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-index="03" data-service="car" data-i18n="services.car.tab">Car interior</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-index="04" data-service="special" data-i18n="services.special.tab">Upholstery</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-index="05" data-service="post" data-i18n="services.post.tab">After renovation</button>
           </div>
 
           <article class="service-panel reveal" id="service-panel">
@@ -109,6 +109,7 @@
               <p id="service-description">A considered clean for the places where life happens.</p>
               <a href="#request" class="text-link"><span data-i18n="services.add">Add to request</span><i>↗</i></a>
             </div>
+            <div class="service-gallery" id="service-gallery" aria-label="Service gallery"></div>
             <ul class="service-list" id="service-list"></ul>
             <div class="service-monogram" aria-hidden="true">CS</div>
           </article>
