@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium cleaning for homes, offices and car interiors in Warsaw." />
+    <meta name="theme-color" content="#f1eee7" />
+    <title>Clean Space — Professional care for every space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=4" />
+    <script src="script.js?v=4" defer></script>
+  </head>
+  <body>
+    <div class="page-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Clean Space home">
+        <svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true">
+          <path d="M21 2.5c1.7 10.8 7.7 16.8 18.5 18.5C28.7 22.7 22.7 28.7 21 39.5 19.3 28.7 13.3 22.7 2.5 21 13.3 19.3 19.3 13.3 21 2.5Z" />
+          <circle cx="21" cy="21" r="4.5" />
+        </svg>
+        <span>Clean Space</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#projects" data-i18n="nav.work">Our work</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language">
+          <button class="active" data-lang="en">EN</button><span>/</span>
+          <button data-lang="de">DE</button><span>/</span>
+          <button data-lang="pl">PL</button>
+        </div>
+        <a class="header-cta magnetic" href="#request" data-i18n="nav.quote">Get a quote</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <nav>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#projects" data-i18n="nav.work">Our work</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#request" data-i18n="nav.quote">Get a quote</a>
+      </nav>
+      <a href="tel:+48787415286">+48 787 415 286</a>
+    </div>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Warsaw &amp; surroundings · Premium cleaning</p>
+          <h1 id="hero-title"><span data-i18n="hero.line1">Space to live.</span><br /><em data-i18n="hero.line2">Time to enjoy.</em></h1>
+          <p class="hero-lede" data-i18n="hero.lede">Impeccable care for interiors, offices and cars. We restore freshness without disrupting the rhythm of your day.</p>
+          <div class="hero-buttons">
+            <a class="button button-dark magnetic" href="#request"><span data-i18n="hero.cta">Book your clean</span><i>↗</i></a>
+            <a class="text-link" href="#projects"><span data-i18n="hero.secondary">Explore our work</span><i>↓</i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="120">
+          <div class="hero-image-wrap parallax-media">
+            <img src="public/images/hero-clean-space.png" alt="Professional cleaning a refined living room" />
+          </div>
+          <div class="hero-note glass-card">
+            <span class="pulse-dot"></span>
+            <div><strong data-i18n="hero.available">Appointments available</strong><small data-i18n="hero.response">Response in up to 15 minutes</small></div>
+          </div>
+          <div class="quality-seal" aria-hidden="true"><span>CARE · PRECISION · RESPECT · </span><b>✦</b></div>
+        </div>
+
+        <div class="hero-stats reveal" data-delay="240">
+          <div><strong>4.9</strong><span data-i18n="hero.rating">average client rating</span></div>
+          <div><strong>500+</strong><span data-i18n="hero.spaces">spaces refreshed</span></div>
+          <div><strong>100%</strong><span data-i18n="hero.safe">safe chemistry</span></div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>INTERIORS ✦ OFFICES ✦ CAR DETAILING ✦ UPHOLSTERY ✦ WINDOWS ✦ DEEP CLEAN ✦</span><span>INTERIORS ✦ OFFICES ✦ CAR DETAILING ✦ UPHOLSTERY ✦ WINDOWS ✦ DEEP CLEAN ✦</span></div></div>
+
+      <section class="section services-section" id="services">
+        <div class="section-aside sticky-title reveal"><span>01</span><p data-i18n="services.kicker">What we can do</p></div>
+        <div class="section-content">
+          <div class="section-heading reveal">
+            <h2 data-i18n="services.title">One standard.<br /><em>Every space.</em></h2>
+            <p data-i18n="services.intro">Choose a category and build the service around what your space actually needs.</p>
+          </div>
+
+          <div class="service-tabs reveal" role="tablist">
+            <button type="button" class="service-tab active" role="tab" aria-controls="service-panel" data-service="home" data-i18n="services.home.tab">Home</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="office" data-i18n="services.office.tab">Office</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="car" data-i18n="services.car.tab">Car interior</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="special" data-i18n="services.special.tab">Special care</button>
+          </div>
+
+          <article class="service-panel reveal" id="service-panel">
+            <div class="service-number">01</div>
+            <div class="service-copy">
+              <p class="eyebrow" id="service-eyebrow">Residential care</p>
+              <h3 id="service-title">Home &amp; apartment</h3>
+              <p id="service-description">A considered clean for the places where life happens.</p>
+              <a href="#request" class="text-link"><span data-i18n="services.add">Add to request</span><i>↗</i></a>
+            </div>
+            <ul class="service-list" id="service-list"></ul>
+            <div class="service-monogram" aria-hidden="true">CS</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section method-section" id="method">
+        <div class="section-aside sticky-title reveal"><span>02</span><p data-i18n="method.kicker">How we clean</p></div>
+        <div class="section-content">
+          <div class="section-heading reveal">
+            <h2 data-i18n="method.title">Powerful on dirt.<br /><em>Gentle on everything else.</em></h2>
+            <p data-i18n="method.intro">We match chemistry, temperature and technique to the material—never the other way around.</p>
+          </div>
+          <div class="method-grid">
+            <article class="method-card reveal"><span class="method-icon">H₂O</span><h3 data-i18n="method.steam.title">Dry steam</h3><p data-i18n="method.steam.text">Deep sanitation with minimal moisture for kitchens, bathrooms and hard surfaces.</p><small>170°C</small></article>
+            <article class="method-card reveal" data-delay="80"><span class="method-icon">pH</span><h3 data-i18n="method.chem.title">Material-safe chemistry</h3><p data-i18n="method.chem.text">Professional, biodegradable formulas selected for fibres, leather, stone and wood.</p><small>4.5–9.0</small></article>
+            <article class="method-card reveal" data-delay="160"><span class="method-icon">≈</span><h3 data-i18n="method.extract.title">Deep extraction</h3><p data-i18n="method.extract.text">Controlled injection and extraction removes embedded dirt without soaking fabrics.</p><small>2× PASS</small></article>
+            <article class="method-card reveal" data-delay="240"><span class="method-icon">◌</span><h3 data-i18n="method.air.title">Air &amp; finish</h3><p data-i18n="method.air.text">HEPA filtration, neutral fragrance and a careful final quality check.</p><small>99.97%</small></article>
+          </div>
+          <div class="promise-strip reveal"><span data-i18n="method.promise">Our quiet promise</span><p data-i18n="method.promiseText">Shoe covers. Protected corners. No harsh smell. Nothing moved without your permission.</p></div>
+        </div>
+      </section>
+
+      <section class="section process-section" id="process">
+        <div class="section-aside sticky-title reveal"><span>03</span><p data-i18n="process.kicker">How it works</p></div>
+        <div class="section-content">
+          <div class="section-heading reveal"><h2 data-i18n="process.title">From message to<br /><em>immaculate.</em></h2><p data-i18n="process.intro">Clear timing, clear pricing and one person responsible from first message to final check.</p></div>
+          <ol class="process-list">
+            <li class="reveal"><span>01</span><div><h3 data-i18n="process.s1.title">Tell us what needs care</h3><p data-i18n="process.s1.text">Send photos and a few details through the form or Telegram.</p></div><b>5 MIN</b></li>
+            <li class="reveal"><span>02</span><div><h3 data-i18n="process.s2.title">Receive a precise quote</h3><p data-i18n="process.s2.text">We confirm the scope, price and a convenient arrival window.</p></div><b>15 MIN</b></li>
+            <li class="reveal"><span>03</span><div><h3 data-i18n="process.s3.title">We arrive fully equipped</h3><p data-i18n="process.s3.text">Our team brings every product and machine needed for the job.</p></div><b>ON TIME</b></li>
+            <li class="reveal"><span>04</span><div><h3 data-i18n="process.s4.title">You approve the finish</h3><p data-i18n="process.s4.text">A room-by-room quality check before we call it complete.</p></div><b>100%</b></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="request-section" id="request">
+        <div class="request-copy reveal"><p class="eyebrow light" data-i18n="request.kicker">A cleaner space starts here</p><h2 data-i18n="request.title">Tell us what needs<br /><em>a little care.</em></h2><p data-i18n="request.text">Share a few details. We will reply with an honest estimate—usually within 15 minutes.</p><div class="request-contact"><span data-i18n="request.prefer">Prefer to talk?</span><a href="tel:+48787415286">+48 787 415 286</a><a href="https://t.me/NikanorovAn" target="_blank" rel="noreferrer">@NikanorovAn ↗</a></div></div>
+        <form class="request-form reveal" id="request-form">
+          <label><span data-i18n="form.name">Your name</span><input type="text" name="name" autocomplete="name" required placeholder="Alex" /></label>
+          <label><span data-i18n="form.contact">Phone or email</span><input type="text" name="contact" autocomplete="tel" required placeholder="+48 ..." /></label>
+          <label><span data-i18n="form.service">What needs cleaning?</span><select name="service" required><option value="" data-i18n="form.choose">Choose a service</option><option value="Home / apartment" data-i18n="services.home.tab">Home</option><option value="Office" data-i18n="services.office.tab">Office</option><option value="Car interior" data-i18n="services.car.tab">Car interior</option><option value="Special care" data-i18n="services.special.tab">Special care</option></select></label>
+          <label class="full"><span data-i18n="form.message">A few details (optional)</span><textarea name="message" rows="3" data-i18n-placeholder="form.placeholder" placeholder="Size, preferred date, special surfaces..."></textarea></label>
+          <label class="honey" aria-hidden="true">Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+          <div class="form-footer full"><label class="consent"><input type="checkbox" required /><span data-i18n="form.consent">I agree to be contacted about my request.</span></label><button class="button button-light magnetic" type="submit"><span data-i18n="form.send">Send request</span><i>↗</i></button></div>
+          <p class="form-status full" role="status"></p>
+        </form>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-aside sticky-title reveal"><span>04</span><p data-i18n="projects.kicker">Selected work</p></div>
+        <div class="section-content">
+          <div class="section-heading project-heading reveal"><h2 data-i18n="projects.title">The difference is<br /><em>in the detail.</em></h2><div class="carousel-controls"><button id="project-prev" aria-label="Previous project">←</button><span><b id="project-current">01</b> / 05</span><button id="project-next" aria-label="Next project">→</button></div></div>
+          <div class="projects-viewport reveal">
+            <div class="projects-track" id="projects-track">
+              <article class="project-card" data-project="car"><button class="project-image parallax-media" data-lightbox="public/images/project-car.png"><img src="public/images/project-car.png" alt="Car interior before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.car.type">Car detailing</span><h3 data-i18n="projects.car.title">Cognac leather interior</h3></div><p data-i18n="projects.car.text">Deep extraction · leather care · 4.5 hours</p></div></article>
+              <article class="project-card" data-project="sofa"><button class="project-image parallax-media" data-lightbox="public/images/project-sofa.png"><img src="public/images/project-sofa.png" alt="Sofa before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.sofa.type">Upholstery</span><h3 data-i18n="projects.sofa.title">Bouclé sofa revival</h3></div><p data-i18n="projects.sofa.text">Fibre test · stain treatment · 2 hours</p></div></article>
+              <article class="project-card" data-project="office"><button class="project-image parallax-media" data-lightbox="public/images/project-office.png"><img src="public/images/project-office.png" alt="Office before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.office.type">Commercial</span><h3 data-i18n="projects.office.title">Executive office reset</h3></div><p data-i18n="projects.office.text">Glass · textiles · hard surfaces · 6 hours</p></div></article>
+              <article class="project-card" data-project="mattress"><button class="project-image parallax-media" data-lightbox="public/images/project-mattress.png"><img src="public/images/project-mattress.png" alt="Mattress before and after deep cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.mattress.type">Sleep care</span><h3 data-i18n="projects.mattress.title">Mattress deep refresh</h3></div><p data-i18n="projects.mattress.text">Vacuum · stain treatment · extraction · 2.5 hours</p></div></article>
+              <article class="project-card" data-project="kitchen"><button class="project-image parallax-media" data-lightbox="public/images/project-kitchen.png"><img src="public/images/project-kitchen.png" alt="Kitchen before and after deep cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.kitchen.type">Residential</span><h3 data-i18n="projects.kitchen.title">Kitchen detail reset</h3></div><p data-i18n="projects.kitchen.text">Stone · cabinetry · appliances · 5 hours</p></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-aside sticky-title reveal"><span>05</span><p data-i18n="faq.kicker">Good to know</p></div>
+        <div class="section-content">
+          <div class="section-heading reveal"><h2 data-i18n="faq.title">Short answers.<br /><em>No fine print.</em></h2></div>
+          <div class="faq-list">
+            <details class="reveal"><summary><span data-i18n="faq.q1">Do I need to provide cleaning products?</span><i></i></summary><p data-i18n="faq.a1">No. We bring professional products, machines, cloths and protection. We only need access to water and electricity.</p></details>
+            <details class="reveal"><summary><span data-i18n="faq.q2">Are your products safe for children and pets?</span><i></i></summary><p data-i18n="faq.a2">Yes. We use biodegradable, carefully dosed formulas and can offer fragrance-free options on request.</p></details>
+            <details class="reveal"><summary><span data-i18n="faq.q3">How is the price calculated?</span><i></i></summary><p data-i18n="faq.a3">By area, material, condition and scope. Send photos for a fixed quote before we begin.</p></details>
+            <details class="reveal"><summary><span data-i18n="faq.q4">Can you clean outside normal office hours?</span><i></i></summary><p data-i18n="faq.a4">Yes. Early mornings, evenings and selected weekends are available for offices and businesses.</p></details>
+            <details class="reveal"><summary><span data-i18n="faq.q5">What if a stain cannot be removed?</span><i></i></summary><p data-i18n="faq.a5">We assess it before treatment and set honest expectations. We never risk damaging a material to chase an impossible result.</p></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top"><a class="brand brand-light" href="#top"><svg class="brand-mark" viewBox="0 0 42 42"><path d="M21 2.5c1.7 10.8 7.7 16.8 18.5 18.5C28.7 22.7 22.7 28.7 21 39.5 19.3 28.7 13.3 22.7 2.5 21 13.3 19.3 19.3 13.3 21 2.5Z"/><circle cx="21" cy="21" r="4.5"/></svg><span>Clean Space</span></a><p data-i18n="footer.tagline">Professional care for the spaces that matter.</p><button class="footer-arrow" id="back-to-top" type="button" aria-label="Back to top">↑</button></div>
+      <div class="footer-grid">
+        <div><h3 data-i18n="footer.explore">Explore</h3><a href="#services" data-i18n="nav.services">Services</a><a href="#process" data-i18n="nav.process">Process</a><a href="#projects" data-i18n="nav.work">Our work</a><a href="#faq" data-i18n="nav.faq">FAQ</a></div>
+        <div><h3 data-i18n="footer.services">Services</h3><a href="#services" data-i18n="services.home.tab">Home</a><a href="#services" data-i18n="services.office.tab">Office</a><a href="#services" data-i18n="services.car.tab">Car interior</a><a href="#services" data-i18n="services.special.tab">Special care</a></div>
+        <div><h3 data-i18n="footer.contact">Contact</h3><a href="tel:+48787415286">+48 787 415 286</a><a href="https://t.me/NikanorovAn" target="_blank" rel="noreferrer">Telegram @NikanorovAn</a><p data-i18n="footer.hours">Mon–Sat · 08:00–20:00</p></div>
+        <div><h3 data-i18n="footer.area">Service area</h3><p data-i18n="footer.location">Warsaw + 40 km</p><p data-i18n="footer.mobile">Mobile team · We come to you</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Clean Space</span><span data-i18n="footer.rights">All spaces deserve care.</span><a href="#request" data-i18n="nav.quote">Get a quote</a></div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Project image"><button class="lightbox-close" aria-label="Close">×</button><img src="" alt="Enlarged cleaning project" /><p data-i18n="projects.zoom">Click anywhere to close</p></div>
+  </body>
+</html>
