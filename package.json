@@ -4,7 +4,7 @@
   "private": true,
   "description": "Premium cleaning services website",
   "scripts": {
-    "start": "node server.js"
+    "start": "node js/server.js"
   },
   "engines": {
     "node": ">=18"

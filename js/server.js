@@ -2,10 +2,10 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-loadEnv(path.join(__dirname, '.env'));
+const root = path.join(__dirname, '..');
+loadEnv(path.join(root, '.env'));
 
 const port = Number(process.env.PORT) || 4173;
-const root = __dirname;
 const types = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',

@@ -43,25 +43,37 @@ translations.de['hero.eyebrow'] = 'Wien & Umgebung · Premium-Reinigung';
 translations.de['footer.location'] = 'Wien + 40 km';
 translations.pl['hero.eyebrow'] = 'Wiedeń i okolice · Sprzątanie premium';
 translations.pl['footer.location'] = 'Wiedeń + 40 km';
+translations.en['services.home.tab'] = 'Apartments';
+translations.en['services.special.tab'] = 'Upholstery';
+translations.en['services.post.tab'] = 'After renovation';
+translations.de['services.home.tab'] = 'Wohnungen';
+translations.de['services.special.tab'] = 'Polster & Textilien';
+translations.de['services.post.tab'] = 'Nach Renovierung';
+translations.pl['services.home.tab'] = 'Mieszkania';
+translations.pl['services.special.tab'] = 'Meble i tekstylia';
+translations.pl['services.post.tab'] = 'Po remoncie';
 
 const services = {
   en: {
     home: ['Residential care', 'Home & apartment', 'A considered clean for the places where life happens.', ['Regular or one-off cleaning', 'Deep & move-out cleaning', 'Kitchen and bathroom detailing', 'Windows and balconies', 'Post-renovation cleaning']],
     office: ['Commercial care', 'Office & business', 'Discreet, reliable care that works around your schedule.', ['Recurring office cleaning', 'Evening & weekend service', 'Workstations and shared areas', 'Glass partitions and windows', 'Sanitary supply management']],
     car: ['Interior detailing', 'Car interior', 'Every seam, surface and difficult corner restored.', ['Seats and carpet extraction', 'Leather cleaning & conditioning', 'Headliner and plastics', 'Odour neutralisation', 'Pet hair removal']],
-    special: ['Focused treatment', 'Special care', 'Expert attention for materials that need a precise approach.', ['Sofas, chairs and mattresses', 'Carpets and rugs', 'Natural stone and wood', 'Steam sanitation', 'Stain and odour treatment']]
+    special: ['Textile care', 'Upholstery & textiles', 'Focused care for fibres that need precise chemistry and controlled moisture.', ['Sofas and armchairs', 'Mattresses and headboards', 'Carpets and rugs', 'Stain and odour treatment', 'Fibre-safe protection']],
+    post: ['Construction reset', 'After renovation', 'A complete dust-to-finish clean before you move back into the space.', ['Fine construction dust removal', 'Paint and adhesive residue', 'Windows, frames and tracks', 'Cabinet interiors and fixtures', 'Final HEPA filtration']]
   },
   de: {
     home: ['Privatpflege', 'Haus & Wohnung', 'Durchdachte Sauberkeit für die Orte, an denen das Leben stattfindet.', ['Regelmäßige oder einmalige Reinigung', 'Grund- & Auszugsreinigung', 'Küche und Bad im Detail', 'Fenster und Balkone', 'Reinigung nach Renovierung']],
     office: ['Gewerbliche Pflege', 'Büro & Unternehmen', 'Diskret und zuverlässig – passend zu Ihrem Zeitplan.', ['Regelmäßige Büroreinigung', 'Abend- & Wochenendservice', 'Arbeitsplätze und Gemeinschaftsräume', 'Glastrennwände und Fenster', 'Verwaltung von Hygieneartikeln']],
     car: ['Innenraumaufbereitung', 'Fahrzeuginnenraum', 'Jede Naht, Oberfläche und schwer erreichbare Ecke wird aufgefrischt.', ['Sitz- und Teppichextraktion', 'Lederreinigung & Pflege', 'Dachhimmel und Kunststoff', 'Geruchsneutralisierung', 'Tierhaarentfernung']],
-    special: ['Gezielte Behandlung', 'Spezialpflege', 'Fachgerechte Pflege für anspruchsvolle Materialien.', ['Sofas, Stühle und Matratzen', 'Teppiche und Läufer', 'Naturstein und Holz', 'Dampfdesinfektion', 'Flecken- und Geruchsbehandlung']]
+    special: ['Textilpflege', 'Polster & Textilien', 'Gezielte Pflege für Fasern mit passender Chemie und kontrollierter Feuchtigkeit.', ['Sofas und Sessel', 'Matratzen und Kopfteile', 'Teppiche und Läufer', 'Flecken- und Geruchsbehandlung', 'Faserschonender Schutz']],
+    post: ['Bauendreinigung', 'Nach Renovierung', 'Eine gründliche Reinigung vom Baustaub bis zum bezugsfertigen Finish.', ['Feinen Baustaub entfernen', 'Farb- und Klebereste', 'Fenster, Rahmen und Schienen', 'Schrankinnenräume und Armaturen', 'Abschließende HEPA-Filtration']]
   },
   pl: {
     home: ['Pielęgnacja domu', 'Dom i mieszkanie', 'Przemyślane sprzątanie miejsc, w których toczy się życie.', ['Sprzątanie regularne lub jednorazowe', 'Gruntowne i po wyprowadzce', 'Dokładne czyszczenie kuchni i łazienki', 'Okna i balkony', 'Sprzątanie po remoncie']],
     office: ['Pielęgnacja biznesu', 'Biuro i firma', 'Dyskretna, niezawodna usługa dopasowana do harmonogramu.', ['Regularne sprzątanie biura', 'Wieczory i weekendy', 'Stanowiska i przestrzenie wspólne', 'Szklane ścianki i okna', 'Uzupełnianie środków higienicznych']],
     car: ['Detailing wnętrza', 'Wnętrze samochodu', 'Każdy szew, powierzchnia i trudno dostępny zakamarek odzyskuje świeżość.', ['Pranie foteli i wykładziny', 'Czyszczenie i pielęgnacja skóry', 'Podsufitka i plastiki', 'Neutralizacja zapachów', 'Usuwanie sierści']],
-    special: ['Zabiegi specjalne', 'Pielęgnacja specjalna', 'Ekspercka troska o materiały wymagające precyzji.', ['Sofy, krzesła i materace', 'Dywany i wykładziny', 'Kamień naturalny i drewno', 'Dezynfekcja parą', 'Usuwanie plam i zapachów']]
+    special: ['Pielęgnacja tkanin', 'Meble i tekstylia', 'Precyzyjna pielęgnacja włókien z odpowiednią chemią i kontrolą wilgoci.', ['Sofy i fotele', 'Materace i zagłówki', 'Dywany i wykładziny', 'Usuwanie plam i zapachów', 'Bezpieczna impregnacja']],
+    post: ['Sprzątanie budowlane', 'Po remoncie', 'Kompleksowe usunięcie pyłu i zabrudzeń przed ponownym użytkowaniem wnętrza.', ['Usuwanie drobnego pyłu', 'Pozostałości farby i kleju', 'Okna, ramy i prowadnice', 'Wnętrza szaf i armatura', 'Końcowa filtracja HEPA']]
   }
 };
 
@@ -100,7 +112,7 @@ function renderService(key, animate = true) {
   $('#service-title').textContent = content[1];
   $('#service-description').textContent = content[2];
   $('#service-list').innerHTML = content[3].map((item) => `<li>${item}</li>`).join('');
-  $('.service-number').textContent = String(['home', 'office', 'car', 'special'].indexOf(key) + 1).padStart(2, '0');
+  $('.service-number').textContent = String(['home', 'office', 'car', 'special', 'post'].indexOf(key) + 1).padStart(2, '0');
   if (animate) {
     panel.classList.remove('service-updated');
     requestAnimationFrame(() => panel.classList.add('service-updated'));

@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=4" />
-    <script src="script.js?v=4" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=5" />
+    <script src="js/script.js?v=5" defer></script>
   </head>
   <body>
     <div class="page-progress" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
 
         <div class="hero-visual reveal" data-delay="120">
           <div class="hero-image-wrap parallax-media">
-            <img src="public/images/hero-clean-space.png" alt="Professional cleaning a refined living room" />
+            <img src="images/hero-clean-space.png" alt="Professional cleaning a refined living room" />
           </div>
           <div class="hero-note glass-card">
             <span class="pulse-dot"></span>
@@ -94,10 +94,11 @@
           </div>
 
           <div class="service-tabs reveal" role="tablist">
-            <button type="button" class="service-tab active" role="tab" aria-controls="service-panel" data-service="home" data-i18n="services.home.tab">Home</button>
+            <button type="button" class="service-tab active" role="tab" aria-controls="service-panel" data-service="home" data-i18n="services.home.tab">Apartments</button>
             <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="office" data-i18n="services.office.tab">Office</button>
             <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="car" data-i18n="services.car.tab">Car interior</button>
-            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="special" data-i18n="services.special.tab">Special care</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="special" data-i18n="services.special.tab">Upholstery</button>
+            <button type="button" class="service-tab" role="tab" aria-controls="service-panel" data-service="post" data-i18n="services.post.tab">After renovation</button>
           </div>
 
           <article class="service-panel reveal" id="service-panel">
@@ -149,7 +150,7 @@
         <form class="request-form reveal" id="request-form">
           <label><span data-i18n="form.name">Your name</span><input type="text" name="name" autocomplete="name" required placeholder="Alex" /></label>
           <label><span data-i18n="form.contact">Phone or email</span><input type="text" name="contact" autocomplete="tel" required placeholder="+48 ..." /></label>
-          <label><span data-i18n="form.service">What needs cleaning?</span><select name="service" required><option value="" data-i18n="form.choose">Choose a service</option><option value="Home / apartment" data-i18n="services.home.tab">Home</option><option value="Office" data-i18n="services.office.tab">Office</option><option value="Car interior" data-i18n="services.car.tab">Car interior</option><option value="Special care" data-i18n="services.special.tab">Special care</option></select></label>
+          <label><span data-i18n="form.service">What needs cleaning?</span><select name="service" required><option value="" data-i18n="form.choose">Choose a service</option><option value="Apartment" data-i18n="services.home.tab">Apartments</option><option value="Office" data-i18n="services.office.tab">Office</option><option value="Car interior" data-i18n="services.car.tab">Car interior</option><option value="Upholstery" data-i18n="services.special.tab">Upholstery</option><option value="After renovation" data-i18n="services.post.tab">After renovation</option></select></label>
           <label class="full"><span data-i18n="form.message">A few details (optional)</span><textarea name="message" rows="3" data-i18n-placeholder="form.placeholder" placeholder="Size, preferred date, special surfaces..."></textarea></label>
           <label class="honey" aria-hidden="true">Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
           <div class="form-footer full"><label class="consent"><input type="checkbox" required /><span data-i18n="form.consent">I agree to be contacted about my request.</span></label><button class="button button-light magnetic" type="submit"><span data-i18n="form.send">Send request</span><i>↗</i></button></div>
@@ -163,11 +164,11 @@
           <div class="section-heading project-heading reveal"><h2 data-i18n="projects.title">The difference is<br /><em>in the detail.</em></h2><div class="carousel-controls"><button id="project-prev" aria-label="Previous project">←</button><span><b id="project-current">01</b> / 05</span><button id="project-next" aria-label="Next project">→</button></div></div>
           <div class="projects-viewport reveal">
             <div class="projects-track" id="projects-track">
-              <article class="project-card" data-project="car"><button class="project-image parallax-media" data-lightbox="public/images/project-car.png"><img src="public/images/project-car.png" alt="Car interior before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.car.type">Car detailing</span><h3 data-i18n="projects.car.title">Cognac leather interior</h3></div><p data-i18n="projects.car.text">Deep extraction · leather care · 4.5 hours</p></div></article>
-              <article class="project-card" data-project="sofa"><button class="project-image parallax-media" data-lightbox="public/images/project-sofa.png"><img src="public/images/project-sofa.png" alt="Sofa before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.sofa.type">Upholstery</span><h3 data-i18n="projects.sofa.title">Bouclé sofa revival</h3></div><p data-i18n="projects.sofa.text">Fibre test · stain treatment · 2 hours</p></div></article>
-              <article class="project-card" data-project="office"><button class="project-image parallax-media" data-lightbox="public/images/project-office.png"><img src="public/images/project-office.png" alt="Office before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.office.type">Commercial</span><h3 data-i18n="projects.office.title">Executive office reset</h3></div><p data-i18n="projects.office.text">Glass · textiles · hard surfaces · 6 hours</p></div></article>
-              <article class="project-card" data-project="mattress"><button class="project-image parallax-media" data-lightbox="public/images/project-mattress.png"><img src="public/images/project-mattress.png" alt="Mattress before and after deep cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.mattress.type">Sleep care</span><h3 data-i18n="projects.mattress.title">Mattress deep refresh</h3></div><p data-i18n="projects.mattress.text">Vacuum · stain treatment · extraction · 2.5 hours</p></div></article>
-              <article class="project-card" data-project="kitchen"><button class="project-image parallax-media" data-lightbox="public/images/project-kitchen.png"><img src="public/images/project-kitchen.png" alt="Kitchen before and after deep cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.kitchen.type">Residential</span><h3 data-i18n="projects.kitchen.title">Kitchen detail reset</h3></div><p data-i18n="projects.kitchen.text">Stone · cabinetry · appliances · 5 hours</p></div></article>
+              <article class="project-card" data-project="car"><button class="project-image parallax-media" data-lightbox="images/project-car.png"><img src="images/project-car.png" alt="Car interior before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.car.type">Car detailing</span><h3 data-i18n="projects.car.title">Cognac leather interior</h3></div><p data-i18n="projects.car.text">Deep extraction · leather care · 4.5 hours</p></div></article>
+              <article class="project-card" data-project="sofa"><button class="project-image parallax-media" data-lightbox="images/project-sofa.png"><img src="images/project-sofa.png" alt="Sofa before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.sofa.type">Upholstery</span><h3 data-i18n="projects.sofa.title">Bouclé sofa revival</h3></div><p data-i18n="projects.sofa.text">Fibre test · stain treatment · 2 hours</p></div></article>
+              <article class="project-card" data-project="office"><button class="project-image parallax-media" data-lightbox="images/project-office.png"><img src="images/project-office.png" alt="Office before and after cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.office.type">Commercial</span><h3 data-i18n="projects.office.title">Executive office reset</h3></div><p data-i18n="projects.office.text">Glass · textiles · hard surfaces · 6 hours</p></div></article>
+              <article class="project-card" data-project="mattress"><button class="project-image parallax-media" data-lightbox="images/project-mattress.png"><img src="images/project-mattress.png" alt="Mattress before and after deep cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.mattress.type">Sleep care</span><h3 data-i18n="projects.mattress.title">Mattress deep refresh</h3></div><p data-i18n="projects.mattress.text">Vacuum · stain treatment · extraction · 2.5 hours</p></div></article>
+              <article class="project-card" data-project="kitchen"><button class="project-image parallax-media" data-lightbox="images/project-kitchen.png"><img src="images/project-kitchen.png" alt="Kitchen before and after deep cleaning" /><span class="before-label" data-i18n="projects.before">Before</span><span class="after-label" data-i18n="projects.after">After</span><i>↗</i></button><div class="project-meta"><div><span data-i18n="projects.kitchen.type">Residential</span><h3 data-i18n="projects.kitchen.title">Kitchen detail reset</h3></div><p data-i18n="projects.kitchen.text">Stone · cabinetry · appliances · 5 hours</p></div></article>
             </div>
           </div>
         </div>
@@ -192,7 +193,7 @@
       <div class="footer-top"><a class="brand brand-light" href="#top"><svg class="brand-mark" viewBox="0 0 42 42"><path d="M21 2.5c1.7 10.8 7.7 16.8 18.5 18.5C28.7 22.7 22.7 28.7 21 39.5 19.3 28.7 13.3 22.7 2.5 21 13.3 19.3 19.3 13.3 21 2.5Z"/><circle cx="21" cy="21" r="4.5"/></svg><span>Clean Space</span></a><p data-i18n="footer.tagline">Professional care for the spaces that matter.</p><button class="footer-arrow" id="back-to-top" type="button" aria-label="Back to top">↑</button></div>
       <div class="footer-grid">
         <div><h3 data-i18n="footer.explore">Explore</h3><a href="#services" data-i18n="nav.services">Services</a><a href="#process" data-i18n="nav.process">Process</a><a href="#projects" data-i18n="nav.work">Our work</a><a href="#faq" data-i18n="nav.faq">FAQ</a></div>
-        <div><h3 data-i18n="footer.services">Services</h3><a href="#services" data-i18n="services.home.tab">Home</a><a href="#services" data-i18n="services.office.tab">Office</a><a href="#services" data-i18n="services.car.tab">Car interior</a><a href="#services" data-i18n="services.special.tab">Special care</a></div>
+        <div><h3 data-i18n="footer.services">Services</h3><a href="#services" data-i18n="services.home.tab">Apartments</a><a href="#services" data-i18n="services.office.tab">Office</a><a href="#services" data-i18n="services.car.tab">Car interior</a><a href="#services" data-i18n="services.special.tab">Upholstery</a><a href="#services" data-i18n="services.post.tab">After renovation</a></div>
         <div><h3 data-i18n="footer.contact">Contact</h3><a href="tel:+48787415286">+48 787 415 286</a><a href="https://t.me/NikanorovAn" target="_blank" rel="noreferrer">Telegram @NikanorovAn</a><p data-i18n="footer.hours">Mon–Sat · 08:00–20:00</p></div>
         <div><h3 data-i18n="footer.area">Service area</h3><p data-i18n="footer.location">Warsaw + 40 km</p><p data-i18n="footer.mobile">Mobile team · We come to you</p></div>
       </div>
