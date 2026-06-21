@@ -284,7 +284,9 @@ $('#request-form').addEventListener('submit', async (event) => {
   try {
     const payload = Object.fromEntries(new FormData(form).entries());
     payload.lang = language;
-    const response = await fetch('/api/request', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+    const apiOrigin = document.querySelector('meta[name="contact-api-origin"]')?.content.replace(/\/$/, '');
+    if (!apiOrigin) throw new Error('Contact API origin is not configured');
+    const response = await fetch(`${apiOrigin}/api/contact/clean-space`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
     if (!response.ok) throw new Error('Request failed');
     form.reset();
     status.textContent = translations[language]['form.success'];
