@@ -289,7 +289,10 @@ $('#request-form').addEventListener('submit', async (event) => {
     const response = await fetch(`${apiOrigin}/api/contact/clean-space`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
     if (!response.ok) throw new Error('Request failed');
     form.reset();
-    status.textContent = translations[language]['form.success'];
+    window.submissionSuccess.show({
+      title: ({ en: 'Thank you', de: 'Vielen Dank', pl: 'Dziękujemy' })[language] || 'Thank you',
+      message: translations[language]['form.success'],
+    });
   } catch (error) {
     status.textContent = translations[language]['form.error'];
   } finally {
